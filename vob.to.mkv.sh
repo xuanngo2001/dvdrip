@@ -22,7 +22,7 @@ input_file=$1
   #  -threads 7 \
 
   ffmpeg \
-    -analyzeduration 50M -probesize 50M \
+    -analyzeduration 150M -probesize 150M \
     -i "${input_file}" \
     ${opt_map} \
     -codec:v libx264 -crf 21 \

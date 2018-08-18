@@ -16,7 +16,7 @@ input_file=$1
   input_file=$(readlink -ev "${input_file}")
 
 # Create map options list for ffmpeg.
-  map_options_list=$(ffmpeg -analyzeduration 50M -probesize 50M -i "${input_file}" 2>&1 || true) # Redirect stderr to stdout.
+  map_options_list=$(ffmpeg -analyzeduration 150M -probesize 150M -i "${input_file}" 2>&1 || true) # Redirect stderr to stdout.
   map_options_list=$(echo "${map_options_list}" | grep Stream)                      # Get all streams.
   >&2 echo "${map_options_list}"                         # DEBUG
   map_options_list=$(echo "${map_options_list}" | grep -vF 'Data: dvd_nav_packet')  # Remove navigation stream.
