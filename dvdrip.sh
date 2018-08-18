@@ -28,8 +28,6 @@ output_file_prefix=$2  # Optional.
       current_dir=$(cdir)
       "${current_dir}"/vob.to.mkv.sh "${output_vob_file}"
 
-    exit
-    
     # Delete merged VOB.
       rm -f "${output_vob_file}"
 
