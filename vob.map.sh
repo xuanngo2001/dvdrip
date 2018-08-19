@@ -10,7 +10,7 @@ input_file=$1
 # Error handling.
   if [ ! -f "${input_file}" ]; then
     echo "Error: ${input_file} is not a file. Aborted!"
-    echo "   e.g.: ${script_name} file.vob"
+    echo "   e.g.: ./${script_name} file.vob"
     exit 1
   fi
   input_file=$(readlink -ev "${input_file}")
