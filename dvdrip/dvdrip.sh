@@ -31,11 +31,10 @@ output_file_prefix=$3  # Optional.
       output_vob_file="${output_file_prefix}${chapter_name}.vob"
       echo "${vob_filelist}" | sed 's/^/"/' | sed 's/$/"/' | xargs cat > "${output_vob_file}"
     
-    # Encode to MKV
-      current_dir=$(cdir)
-      "${current_dir}"/vob.to.mkv.sh "${output_vob_file}" "${quality}"
+    # Encode.
+      vob.to.mkv.sh "${output_vob_file}" "${quality}"
 
     # Delete merged VOB.
-#      rm -f "${output_vob_file}"
+      rm -f "${output_vob_file}"
 
   done < <( ls -1 "${video_ts_dir}"/VTS_*.VOB | sed 's/_.\.VOB//' | sort | uniq )

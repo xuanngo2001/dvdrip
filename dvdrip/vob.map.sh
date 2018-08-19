@@ -25,3 +25,4 @@ input_file=$1
 
 # Display results.
   echo "${map_options_list}"
+  

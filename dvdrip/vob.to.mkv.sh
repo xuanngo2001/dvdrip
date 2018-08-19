@@ -22,8 +22,7 @@ quality=$2
 	fi
 
 # Convert.
-  current_dir=$(cdir)
-  opt_map=$("${current_dir}"/vob.map.sh "${input_file}" 2> /dev/null)
+  opt_map=$(vob.map.sh "${input_file}" 2> /dev/null)
   output_file=$(basename "${input_file}")
   #thread_num=$(grep -c ^processor /proc/cpuinfo)
   #  -threads 7 \
@@ -36,3 +35,5 @@ quality=$2
     -codec:a libmp3lame -qscale:a 2 \
     -codec:s copy \
     "${output_file}".mkv < /dev/null
+    
+
