@@ -2,7 +2,7 @@
 set -e
 # Description: Update Firstboot vbox script.
 
-fb_run_dir=$(readlink -ev /media/master/github/firstboot/apps/dvdrip/run)
+fb_run_dir=$(readlink -ev /media/master/github/firstboot/firstboot/apps/dvdrip/run)
 dvdrip_script_dir=$(readlink -ev ./dvdrip)
 
 # Update dvdrip to firstboot.
